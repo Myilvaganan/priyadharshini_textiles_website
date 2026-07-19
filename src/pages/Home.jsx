@@ -6,9 +6,10 @@ import Reveal from "../components/Reveal";
 import StatCounter from "../components/StatCounter";
 import IconFeature from "../components/IconFeature";
 import { images } from "../data/images";
-import { products } from "../data/products";
 import { homeCarouselSlides } from "../data/carousel";
-import { heroSlides } from "../data/heroSlides";
+import { heroSlides as heroSlideImages } from "../data/heroSlides";
+import { useContent } from "../context/ContentContext";
+import { useProducts } from "../hooks/useProducts";
 import {
   IconSpindle,
   IconFactory,
@@ -18,7 +19,18 @@ import {
   IconAward,
 } from "../components/icons";
 
+const whyChooseUsIcons = [IconFactory, IconShieldCheck, IconTruck, IconSpindle, IconLeaf, IconAward];
+
 export default function Home() {
+  const { content } = useContent();
+  const { home } = content;
+  const products = useProducts();
+
+  const heroSlides = heroSlideImages.map((slide, i) => ({
+    ...slide,
+    ...(home.hero.slides[i] || {}),
+  }));
+
   return (
     <div>
       {/* Hero */}
@@ -27,12 +39,7 @@ export default function Home() {
       {/* Stats */}
       <section className="bg-brand-dark py-14">
         <div className="mx-auto grid max-w-7xl grid-cols-2 gap-8 px-6 sm:grid-cols-4">
-          {[
-            { value: 25, suffix: "+", label: "Years of Experience" },
-            { value: 40, suffix: "+", label: "Export Countries" },
-            { value: 3200, suffix: "+", label: "Employees" },
-            { value: 12, suffix: "M", label: "Meters / Month" },
-          ].map((s, i) => (
+          {home.stats.map((s, i) => (
             <Reveal key={s.label} delay={i * 100}>
               <StatCounter value={s.value} suffix={s.suffix} label={s.label} />
             </Reveal>
@@ -46,13 +53,10 @@ export default function Home() {
           <Reveal>
             <p className="eyebrow">Home &gt; About Us</p>
             <h2 className="mt-3 font-serif text-3xl font-bold text-brand-dark sm:text-4xl">
-              A Legacy of Craftsmanship, Built for Modern Manufacturing
+              {home.aboutTeaser.heading}
             </h2>
             <p className="mt-5 text-base leading-relaxed text-brand-gray">
-              From a single weaving unit to a vertically integrated textile group spanning
-              spinning, weaving, processing and made-ups, Priyadharshini Textiles has spent
-              over two decades earning the trust of global brands through consistency,
-              transparency and craftsmanship at scale.
+              {home.aboutTeaser.body}
             </p>
             <div className="mt-8">
               <Button to="/about/our-story" variant="secondary-dark">
@@ -81,11 +85,10 @@ export default function Home() {
           <Reveal className="text-center">
             <p className="eyebrow">Home &gt; Products</p>
             <h2 className="mt-3 font-serif text-3xl font-bold text-brand-dark sm:text-4xl">
-              Our Product Range
+              {home.productsIntro.heading}
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-base text-brand-gray">
-              From raw yarn to finished made-up textiles, our integrated production lines
-              cover the full manufacturing chain.
+              {home.productsIntro.body}
             </p>
           </Reveal>
 
@@ -110,52 +113,18 @@ export default function Home() {
           <Reveal className="text-center">
             <p className="eyebrow">Why Priyadharshini</p>
             <h2 className="mt-3 font-serif text-3xl font-bold text-brand-dark sm:text-4xl">
-              Built on Reliability
+              {home.whyChooseUs.heading}
             </h2>
           </Reveal>
           <div className="mt-14 grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
-            {[
-              {
-                icon: <IconFactory className="h-6 w-6" />,
-                title: "Integrated Manufacturing",
-                description:
-                  "Spinning, weaving, processing and made-ups under one roof for tighter quality control.",
-              },
-              {
-                icon: <IconShieldCheck className="h-6 w-6" />,
-                title: "Certified Quality",
-                description:
-                  "ISO 9001, Oeko-Tex and GOTS certified processes across every production stage.",
-              },
-              {
-                icon: <IconTruck className="h-6 w-6" />,
-                title: "Reliable Logistics",
-                description:
-                  "On-time delivery to over 40 countries backed by dedicated export operations.",
-              },
-              {
-                icon: <IconSpindle className="h-6 w-6" />,
-                title: "Modern Machinery",
-                description:
-                  "Shuttleless looms and automated spinning frames for consistent, high-volume output.",
-              },
-              {
-                icon: <IconLeaf className="h-6 w-6" />,
-                title: "Sustainable Practices",
-                description:
-                  "Water-efficient dyeing and energy-conscious operations across our facilities.",
-              },
-              {
-                icon: <IconAward className="h-6 w-6" />,
-                title: "25+ Years Experience",
-                description:
-                  "A trusted manufacturing partner to global apparel and home textile brands since 1998.",
-              },
-            ].map((f, i) => (
-              <Reveal key={f.title} delay={(i % 3) * 100}>
-                <IconFeature icon={f.icon} title={f.title} description={f.description} />
-              </Reveal>
-            ))}
+            {home.whyChooseUs.features.map((f, i) => {
+              const Icon = whyChooseUsIcons[i % whyChooseUsIcons.length];
+              return (
+                <Reveal key={f.title} delay={(i % 3) * 100}>
+                  <IconFeature icon={<Icon className="h-6 w-6" />} title={f.title} description={f.description} />
+                </Reveal>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -166,11 +135,10 @@ export default function Home() {
           <Reveal className="text-center">
             <p className="eyebrow">Home &gt; Gallery</p>
             <h2 className="mt-3 font-serif text-3xl font-bold text-brand-dark sm:text-4xl">
-              Inside Our Facilities
+              {home.facilityIntro.heading}
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-base text-brand-gray">
-              A closer look at the spinning, weaving and finishing floors that keep our
-              production running around the clock.
+              {home.facilityIntro.body}
             </p>
           </Reveal>
           <Reveal delay={150} className="mt-12">
@@ -194,12 +162,9 @@ export default function Home() {
         <Reveal className="mx-auto max-w-7xl px-6 text-white">
           <p className="eyebrow">Home &gt; Infrastructure</p>
           <h2 className="mt-3 max-w-xl font-serif text-3xl font-bold sm:text-4xl">
-            State-of-the-Art Manufacturing Infrastructure
+            {home.infrastructureTeaser.heading}
           </h2>
-          <p className="mt-5 max-w-xl text-white/80">
-            Spread across a modern industrial campus with dedicated spinning, weaving,
-            processing and warehousing units, purpose-built for scale and precision.
-          </p>
+          <p className="mt-5 max-w-xl text-white/80">{home.infrastructureTeaser.body}</p>
           <div className="mt-8">
             <Button to="/infrastructure" variant="secondary">
               View Infrastructure
@@ -213,11 +178,9 @@ export default function Home() {
         <Reveal className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 px-6 text-center sm:flex-row sm:text-left">
           <div>
             <h2 className="font-serif text-2xl font-bold text-white sm:text-3xl">
-              Ready to Partner With Us?
+              {home.cta.heading}
             </h2>
-            <p className="mt-2 text-white/80">
-              Get a quote or discuss your sourcing requirements with our export team.
-            </p>
+            <p className="mt-2 text-white/80">{home.cta.body}</p>
           </div>
           <Button to="/contact" variant="primary">
             Send an Enquiry

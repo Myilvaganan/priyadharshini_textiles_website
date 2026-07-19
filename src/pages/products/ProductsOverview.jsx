@@ -2,9 +2,11 @@ import PageHeaderBanner from "../../components/PageHeaderBanner";
 import Card from "../../components/Card";
 import Reveal from "../../components/Reveal";
 import { images } from "../../data/images";
-import { products } from "../../data/products";
+import { useProducts } from "../../hooks/useProducts";
 
 export default function ProductsOverview() {
+  const products = useProducts();
+
   return (
     <div>
       <PageHeaderBanner

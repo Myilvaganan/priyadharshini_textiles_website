@@ -3,9 +3,12 @@ import PageHeaderBanner from "../components/PageHeaderBanner";
 import Button from "../components/Button";
 import Reveal from "../components/Reveal";
 import { images } from "../data/images";
+import { useContent } from "../context/ContentContext";
 import { IconMapPin, IconPhone, IconMail, IconClock } from "../components/icons";
 
 export default function ContactUs() {
+  const { content } = useContent();
+  const { contact } = content;
   const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = (e) => {
@@ -28,31 +31,25 @@ export default function ContactUs() {
               {
                 icon: <IconMapPin className="h-6 w-6" />,
                 title: "Our Address",
-                body: (
-                  <p className="mt-2 text-sm text-brand-gray">
-                    SIPCOT Industrial Complex, Perundurai, Erode, Tamil Nadu 638052, India
-                  </p>
-                ),
+                body: <p className="mt-2 text-sm text-brand-gray">{contact.address}</p>,
               },
               {
                 icon: <IconPhone className="h-6 w-6" />,
                 title: "Call Us",
-                body: (
-                  <>
-                    <p className="mt-2 text-sm text-brand-gray">+91 424 267 1234</p>
-                    <p className="text-sm text-brand-gray">+91 98765 43210</p>
-                  </>
-                ),
+                body: contact.phones.map((phone, i) => (
+                  <p key={phone} className={i === 0 ? "mt-2 text-sm text-brand-gray" : "text-sm text-brand-gray"}>
+                    {phone}
+                  </p>
+                )),
               },
               {
                 icon: <IconMail className="h-6 w-6" />,
                 title: "Email Us",
-                body: (
-                  <>
-                    <p className="mt-2 text-sm text-brand-gray">info@priyadharshinitextiles.com</p>
-                    <p className="text-sm text-brand-gray">exports@priyadharshinitextiles.com</p>
-                  </>
-                ),
+                body: contact.emails.map((email, i) => (
+                  <p key={email} className={i === 0 ? "mt-2 text-sm text-brand-gray" : "text-sm text-brand-gray"}>
+                    {email}
+                  </p>
+                )),
               },
             ].map((c, i) => (
               <Reveal key={c.title} delay={i * 100}>
@@ -71,12 +68,9 @@ export default function ContactUs() {
             <Reveal>
               <p className="eyebrow">Home &gt; Contact Us</p>
               <h2 className="mt-3 font-serif text-3xl font-bold text-brand-dark">
-                Send Us an Enquiry
+                {contact.intro.heading}
               </h2>
-              <p className="mt-3 text-brand-gray">
-                Fill in your requirements and our export team will get back to you within 24
-                hours.
-              </p>
+              <p className="mt-3 text-brand-gray">{contact.intro.body}</p>
 
               {submitted ? (
                 <div className="mt-8 rounded-xl border border-brand-gold/40 bg-brand-gold/10 p-6">
@@ -160,8 +154,8 @@ export default function ContactUs() {
                   <IconClock className="h-5 w-5" />
                 </span>
                 <h3 className="font-serif text-lg font-semibold">Business Hours</h3>
-                <p className="mt-2 text-sm text-white/80">Monday – Saturday: 9:00 AM – 6:30 PM IST</p>
-                <p className="text-sm text-white/80">Sunday: Closed</p>
+                <p className="mt-2 text-sm text-white/80">{contact.hours.weekdays}</p>
+                <p className="text-sm text-white/80">{contact.hours.sunday}</p>
               </div>
             </Reveal>
           </div>

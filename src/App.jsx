@@ -1,5 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
+import AdminPage from "./pages/admin/AdminPage";
 import Home from "./pages/Home";
 import AboutOverview from "./pages/about/AboutOverview";
 import OurStory from "./pages/about/OurStory";
@@ -18,6 +19,8 @@ import NotFound from "./pages/NotFound";
 export default function App() {
   return (
     <Routes>
+      <Route path="/admin" element={<AdminPage />} />
+
       <Route element={<Layout />}>
         <Route path="/" element={<Home />} />
 

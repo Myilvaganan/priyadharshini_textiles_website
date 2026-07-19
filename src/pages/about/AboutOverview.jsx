@@ -2,30 +2,19 @@ import PageHeaderBanner from "../../components/PageHeaderBanner";
 import Card from "../../components/Card";
 import Reveal from "../../components/Reveal";
 import { images } from "../../data/images";
+import { useContent } from "../../context/ContentContext";
 import { IconAward, IconUsers, IconGlobe } from "../../components/icons";
 
-const sections = [
-  {
-    to: "/about/our-story",
-    title: "Our Story",
-    description: "How a single weaving unit grew into an integrated textile group.",
-    icon: <IconAward className="h-6 w-6" />,
-  },
-  {
-    to: "/about/mission-vision",
-    title: "Mission & Vision",
-    description: "The purpose and values that guide every decision we make.",
-    icon: <IconGlobe className="h-6 w-6" />,
-  },
-  {
-    to: "/about/leadership",
-    title: "Leadership",
-    description: "Meet the team leading our manufacturing and export operations.",
-    icon: <IconUsers className="h-6 w-6" />,
-  },
+const sectionLinks = [
+  { to: "/about/our-story", icon: <IconAward className="h-6 w-6" /> },
+  { to: "/about/mission-vision", icon: <IconGlobe className="h-6 w-6" /> },
+  { to: "/about/leadership", icon: <IconUsers className="h-6 w-6" /> },
 ];
 
 export default function AboutOverview() {
+  const { content } = useContent();
+  const { overview } = content.about;
+
   return (
     <div>
       <PageHeaderBanner
@@ -40,15 +29,9 @@ export default function AboutOverview() {
             <Reveal>
               <p className="eyebrow">Home &gt; About Us</p>
               <h2 className="mt-3 font-serif text-3xl font-bold text-brand-dark sm:text-4xl">
-                A Fully Integrated Textile Manufacturer
+                {overview.heading}
               </h2>
-              <p className="mt-5 leading-relaxed text-brand-gray">
-                Priyadharshini Textiles has grown from a single weaving unit into a
-                vertically integrated group spanning spinning, weaving, processing and
-                made-up textiles. For over 25 years, we've supplied consistent, certified
-                quality fabric and yarn to apparel and home furnishing brands across the
-                globe.
-              </p>
+              <p className="mt-5 leading-relaxed text-brand-gray">{overview.body}</p>
             </Reveal>
             <Reveal delay={150}>
               <img
@@ -60,9 +43,14 @@ export default function AboutOverview() {
           </div>
 
           <div className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-3">
-            {sections.map((s, i) => (
-              <Reveal key={s.to} delay={i * 100}>
-                <Card icon={s.icon} title={s.title} description={s.description} to={s.to} />
+            {overview.sections.map((s, i) => (
+              <Reveal key={sectionLinks[i].to} delay={i * 100}>
+                <Card
+                  icon={sectionLinks[i].icon}
+                  title={s.title}
+                  description={s.description}
+                  to={sectionLinks[i].to}
+                />
               </Reveal>
             ))}
           </div>

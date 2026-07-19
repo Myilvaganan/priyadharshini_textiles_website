@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
 import Logo from "./Logo";
 import { navLinks } from "../data/nav";
-import { products } from "../data/products";
+import { useProducts } from "../hooks/useProducts";
+import { useContent } from "../context/ContentContext";
 import { IconMapPin, IconPhone, IconMail } from "./icons";
 
 const socials = [
@@ -12,6 +13,9 @@ const socials = [
 
 export default function Footer() {
   const quickLinks = navLinks.flatMap((l) => (l.dropdown ? [] : [l]));
+  const products = useProducts();
+  const { content } = useContent();
+  const { contact } = content;
 
   return (
     <footer className="bg-brand-dark text-white">
@@ -67,15 +71,15 @@ export default function Footer() {
           <ul className="mt-4 space-y-3 text-sm text-white/75">
             <li className="flex gap-3">
               <IconMapPin className="mt-0.5 h-4 w-4 shrink-0 text-brand-gold" />
-              <span>SIPCOT Industrial Complex, Perundurai, Erode, Tamil Nadu 638052, India</span>
+              <span>{contact.address}</span>
             </li>
             <li className="flex gap-3">
               <IconPhone className="mt-0.5 h-4 w-4 shrink-0 text-brand-gold" />
-              <span>+91 424 267 1234</span>
+              <span>{contact.phones[0]}</span>
             </li>
             <li className="flex gap-3">
               <IconMail className="mt-0.5 h-4 w-4 shrink-0 text-brand-gold" />
-              <span>info@priyadharshinitextiles.com</span>
+              <span>{contact.emails[0]}</span>
             </li>
           </ul>
         </div>

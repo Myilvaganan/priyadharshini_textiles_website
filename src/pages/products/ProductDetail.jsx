@@ -1,13 +1,14 @@
-import { useParams, Link, Navigate } from "react-router-dom";
+import { useParams, Navigate } from "react-router-dom";
 import PageHeaderBanner from "../../components/PageHeaderBanner";
 import Button from "../../components/Button";
 import Card from "../../components/Card";
 import Reveal from "../../components/Reveal";
-import { getProductBySlug, products } from "../../data/products";
+import { useProducts } from "../../hooks/useProducts";
 
 export default function ProductDetail() {
   const { slug } = useParams();
-  const product = getProductBySlug(slug);
+  const products = useProducts();
+  const product = products.find((p) => p.slug === slug);
 
   if (!product) return <Navigate to="/products" replace />;
 
