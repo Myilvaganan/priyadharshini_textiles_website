@@ -133,3 +133,21 @@ export const IconChevronRight = (p) => (
     <path d="m9 6 6 6-6 6" />
   </svg>
 );
+
+export const IconMessageCircle = (p) => (
+  <svg {...base} {...p}>
+    <path d="M12 20c4.97 0 9-3.58 9-8s-4.03-8-9-8-9 3.58-9 8c0 1.85.68 3.55 1.83 4.95L3 21l4.5-1.2A9.7 9.7 0 0 0 12 20Z" />
+  </svg>
+);
+
+export const IconSend = (p) => (
+  <svg {...base} {...p}>
+    <path d="m3 11 18-8-8 18-2.5-7.5L3 11Z" />
+  </svg>
+);
+
+export const IconX = (p) => (
+  <svg {...base} {...p}>
+    <path d="M6 6l12 12M18 6 6 18" />
+  </svg>
+);
