@@ -19,7 +19,7 @@ html {
 
 body {
   margin: 0;
-  background: #ffffff;
+  background: var(--color-brand-dark);
   color: var(--color-brand-ink);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
@@ -44,7 +44,7 @@ body {
 }
 
 .animate-page-in {
-  animation: page-in 200ms ease-out both;
+  animation: page-in 500ms ease-out both;
 }
 
 @keyframes fade-in {
