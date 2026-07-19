@@ -7,12 +7,12 @@ export default function HeroCarousel({ slides, intervalMs = 6000 }) {
   const active = slides[index];
 
   return (
-    <section className="relative flex min-h-[620px] items-center overflow-hidden">
+    <section className="relative flex min-h-[620px] items-center overflow-hidden bg-brand-dark">
       {slides.map((slide, i) => (
         <div
           key={i}
           aria-hidden={i !== index}
-          className={`absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ease-in-out ${
+          className={`absolute inset-0 bg-brand-dark bg-cover bg-center transition-opacity duration-1000 ease-in-out ${
             i === index ? "opacity-100" : "opacity-0"
           }`}
           style={{

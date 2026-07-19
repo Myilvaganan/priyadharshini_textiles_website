@@ -186,7 +186,7 @@ export default function Home() {
 
       {/* Infrastructure teaser */}
       <section
-        className="relative bg-cover bg-center py-24"
+        className="relative bg-brand-dark bg-cover bg-center py-24"
         style={{
           backgroundImage: `linear-gradient(100deg, rgba(27,58,46,0.93), rgba(27,58,46,0.8)), url(${images.warehouseSteel})`,
         }}

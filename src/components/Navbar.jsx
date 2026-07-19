@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import Logo from "./Logo";
 import Button from "./Button";
+import ScrollProgressBar from "./ScrollProgressBar";
 import { navLinks } from "../data/nav";
 import { IconChevronDown } from "./icons";
 
@@ -88,6 +89,8 @@ export default function Navbar() {
           <span className={`h-0.5 w-6 bg-white transition-transform ${mobileOpen ? "-translate-y-2 -rotate-45" : ""}`} />
         </button>
       </div>
+
+      <ScrollProgressBar />
 
       <div
         className={`grid bg-brand-dark transition-[grid-template-rows] duration-300 ease-out lg:hidden ${
