@@ -23,8 +23,8 @@ export default function Footer() {
         <div>
           <Logo />
           <p className="mt-4 text-sm leading-relaxed text-white/70">
-            Weaving trust into every thread — a fully integrated B2B textile manufacturer
-            serving apparel, home furnishing and technical textile brands worldwide.
+            Weaving trust into every tape — a fully integrated B2B manufacturer of lanyards,
+            laces and drawcords serving apparel and accessory brands worldwide.
           </p>
           <div className="mt-5 flex gap-3">
             {socials.map((s) => (
@@ -87,7 +87,7 @@ export default function Footer() {
 
       <div className="border-t border-white/10">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-6 py-5 text-xs text-white/60 sm:flex-row">
-          <p>&copy; {new Date().getFullYear()} Priyadharshini Textiles. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Priyadharshini Tapes. All rights reserved.</p>
           <div className="flex gap-4">
             <a href="#" className="hover:text-brand-gold">
               Privacy Policy

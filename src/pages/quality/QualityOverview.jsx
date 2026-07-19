@@ -29,8 +29,8 @@ export default function QualityOverview() {
             </Reveal>
             <Reveal delay={150}>
               <img
-                src={images.womenSewingFactory2}
-                alt="Quality inspection on the factory floor"
+                src={images.measuringTape}
+                alt="Measuring tape used for quality inspection"
                 className="h-80 w-full rounded-xl object-cover shadow-lg"
               />
             </Reveal>

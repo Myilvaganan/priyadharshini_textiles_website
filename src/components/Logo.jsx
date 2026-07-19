@@ -22,7 +22,7 @@ export default function Logo({ dark = false, className = "" }) {
           Priyadharshini
         </div>
         <div className={`text-[11px] font-medium uppercase tracking-[0.25em] ${subColor}`}>
-          Textiles
+          Tapes
         </div>
       </div>
     </div>

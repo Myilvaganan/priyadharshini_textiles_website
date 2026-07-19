@@ -12,7 +12,7 @@ const certs = [
   {
     icon: <IconLeaf className="h-7 w-7" />,
     name: "Oeko-Tex Standard 100",
-    description: "Certifies fabrics are tested for harmful substances and safe for human use.",
+    description: "Certifies tapes and lanyards are tested for harmful substances and safe for human use.",
   },
   {
     icon: <IconGlobe className="h-7 w-7" />,

@@ -5,10 +5,10 @@ import { images } from "../../data/images";
 import { IconFlask, IconShieldCheck, IconClock, IconAward } from "../../components/icons";
 
 const tests = [
-  { title: "Tensile & Tear Strength", description: "Measures fabric durability under stress for apparel and industrial applications." },
+  { title: "Tensile & Tear Strength", description: "Measures tape and cord durability under stress for apparel and industrial applications." },
   { title: "Colorfastness Testing", description: "Verifies resistance to washing, light and rubbing to meet buyer standards." },
-  { title: "GSM & Count Verification", description: "Confirms fabric weight and yarn count against order specifications." },
-  { title: "Shrinkage & Dimensional Stability", description: "Checks fabric behavior after washing and finishing processes." },
+  { title: "Width & Denier Verification", description: "Confirms tape width and yarn denier against order specifications." },
+  { title: "Shrinkage & Dimensional Stability", description: "Checks tape and lace behavior after washing and finishing processes." },
   { title: "Chemical Compliance", description: "Screens for restricted substances per Oeko-Tex and REACH standards." },
   { title: "Shade Matching", description: "Spectrophotometer-based lab dips ensure consistent color across bulk production." },
 ];
@@ -27,8 +27,8 @@ export default function Testing() {
           <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
             <Reveal>
               <img
-                src={images.womenSewingFactory2}
-                alt="Lab testing facility"
+                src={images.measuringTape}
+                alt="Measuring tape used for lab testing"
                 className="h-96 w-full rounded-xl object-cover shadow-lg"
               />
             </Reveal>
@@ -39,7 +39,7 @@ export default function Testing() {
               </h2>
               <p className="mt-5 leading-relaxed text-brand-gray">
                 Our on-site laboratories run physical and chemical testing on raw materials,
-                in-process goods and finished fabric — catching deviations before they reach
+                in-process goods and finished tape — catching deviations before they reach
                 a shipment, not after.
               </p>
               <div className="mt-6 flex gap-8">

@@ -7,19 +7,19 @@ export const homeCarouselSlides = [
     caption: "Precision Weaving, Every Meter",
   },
   {
-    src: images.handLoomTopViewHD,
-    alt: "Overhead view of the weaving process",
+    src: images.yarnSpinningLineHD,
+    alt: "Overhead view of the yarn spinning line",
     caption: "Engineered for Consistent Quality",
   },
   {
-    src: images.sewingWorkerMachineHD,
-    alt: "Operator on an industrial sewing machine",
-    caption: "Skilled Hands, Modern Machines",
+    src: images.sewingMachineDetailHD,
+    alt: "Detail of an industrial sewing machine",
+    caption: "Precision Machines, Every Stitch",
   },
   {
     src: images.fabricRollsFactoryHD,
-    alt: "Finished fabric rolls in the factory",
-    caption: "From Raw Yarn to Finished Fabric",
+    alt: "Finished tape rolls in the factory",
+    caption: "From Raw Yarn to Finished Tape",
   },
   {
     src: images.warehouseSteelHD,

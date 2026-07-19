@@ -8,14 +8,14 @@ import { IconSpindle, IconFactory, IconWarehouse, IconFlask, IconBolt, IconTruck
 const units = [
   {
     icon: <IconSpindle className="h-6 w-6" />,
-    title: "Spinning Unit",
-    description: "Automated ring & open-end spinning frames producing cotton and blended yarns.",
+    title: "Yarn Twisting Unit",
+    description: "Automated twisting and texturizing lines producing polyester, nylon and cotton yarns.",
     image: images.threadSpoolsSelective,
   },
   {
     icon: <IconFactory className="h-6 w-6" />,
-    title: "Weaving Shed",
-    description: "Shuttleless air-jet and rapier looms running high-volume greige fabric production.",
+    title: "Weaving & Braiding Shed",
+    description: "Narrow-fabric needle looms and braiding machines running high-volume tape and cord production.",
     image: images.weavingLoomColorful,
   },
   {

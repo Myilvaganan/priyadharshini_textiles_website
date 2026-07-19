@@ -23,8 +23,8 @@ export default function ProductsOverview() {
               Our Product Range
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-brand-gray">
-              An integrated production chain covering yarn, woven fabric, dyed & printed
-              fabric, home textiles and technical textiles — engineered to buyer
+              An integrated production chain covering yarn, ID card tapes & lanyards,
+              shoelaces, hoodie drawcords and shorts waistband tapes — engineered to buyer
               specification and delivered at scale.
             </p>
           </Reveal>

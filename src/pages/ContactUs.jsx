@@ -118,11 +118,11 @@ export default function ContactUs() {
                   <div>
                     <label className="text-sm font-medium text-brand-dark">Product of Interest</label>
                     <select className="mt-1.5 w-full rounded-lg border border-brand-dark/15 px-4 py-2.5 text-sm outline-none transition-colors duration-200 focus:border-brand-gold">
-                      <option>Yarn</option>
-                      <option>Greige Fabric</option>
-                      <option>Dyed & Printed Fabric</option>
-                      <option>Home Textiles</option>
-                      <option>Technical Textiles</option>
+                      <option>Yarn & Raw Cords</option>
+                      <option>ID Card Tapes & Lanyards</option>
+                      <option>Shoelaces</option>
+                      <option>Hoodie Drawcords</option>
+                      <option>Shorts Waistband Tapes</option>
                     </select>
                   </div>
                   <div>

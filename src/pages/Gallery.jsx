@@ -5,25 +5,25 @@ import { images } from "../data/images";
 
 const galleryItems = [
   { src: images.weavingLoomColorful, caption: "Air-jet weaving loom in production", category: "Weaving" },
-  { src: images.weaverLoomHands, caption: "Weaver setting up a fabric run", category: "Weaving" },
-  { src: images.weaverLoomCloseup, caption: "Close-up of loom threading", category: "Weaving" },
-  { src: images.handLoomTopView, caption: "Overhead view of weaving process", category: "Weaving" },
+  { src: images.narrowLoomMachine, caption: "Narrow-fabric weaving machine in production", category: "Weaving" },
+  { src: images.loomMachineDetail, caption: "Close-up of narrow loom threading", category: "Weaving" },
+  { src: images.yarnSpinningLine, caption: "Overhead view of the yarn spinning line", category: "Weaving" },
   { src: images.yarnSpoolsColorful, caption: "Dyed yarn spools ready for weaving", category: "Yarn" },
   { src: images.threadSpoolsWall, caption: "Thread spool inventory wall", category: "Yarn" },
   { src: images.threadSpoolsClose, caption: "Close-up of spun thread spools", category: "Yarn" },
   { src: images.threadSpoolsSelective, caption: "Sorted thread spools by shade", category: "Yarn" },
-  { src: images.fabricRollsFactory, caption: "Finished fabric rolls in the factory", category: "Fabric" },
-  { src: images.threadsClose, caption: "Detail of woven thread texture", category: "Fabric" },
-  { src: images.sewingWorkerMachine, caption: "Operator on industrial sewing machine", category: "Workforce" },
-  { src: images.factoryWorkerFacility, caption: "Worker in the manufacturing facility", category: "Workforce" },
-  { src: images.womenSewingFactory, caption: "Sewing floor operations", category: "Workforce" },
-  { src: images.womenSewingFactory2, caption: "Quality checks on the sewing line", category: "Workforce" },
-  { src: images.smilingTextileWorker, caption: "Team member on the factory floor", category: "Workforce" },
-  { src: images.dedicatedWorkers, caption: "Production team at work", category: "Workforce" },
-  { src: images.industrialWorkers, caption: "Technical textiles processing", category: "Workforce" },
-  { src: images.busySewingFloor, caption: "Full sewing floor in operation", category: "Workforce" },
-  { src: images.femaleWorkersModern, caption: "Modern manufacturing facility floor", category: "Workforce" },
-  { src: images.femaleWorkersRolling, caption: "Rolling finished fabric for dispatch", category: "Fabric" },
+  { src: images.fabricRollsFactory, caption: "Finished tape rolls in the factory", category: "Tape" },
+  { src: images.threadsClose, caption: "Detail of woven tape texture", category: "Tape" },
+  { src: images.shoelaceCloseup, caption: "Finished shoelaces, ready for dispatch", category: "Tape" },
+  { src: images.drawstringPouch, caption: "Drawcord finished with tipping detail", category: "Tape" },
+  { src: images.sewingMachineDetail, caption: "Detail of an industrial sewing machine", category: "Production" },
+  { src: images.yarnRackFacility, caption: "Yarn rack inside the manufacturing facility", category: "Production" },
+  { src: images.sewingMachineNeedle, caption: "Sewing machine needle detail", category: "Production" },
+  { src: images.sewingMachineThreaded, caption: "Threaded sewing machine on the finishing line", category: "Production" },
+  { src: images.idCardLanyardBlank, caption: "Blank ID card lanyard, ready for branding", category: "Production" },
+  { src: images.yarnSpinningMachine, caption: "Yarn spinning machine at work", category: "Production" },
+  { src: images.narrowFabricMachinery, caption: "Braiding and cord processing machinery", category: "Production" },
+  { src: images.yarnSpinningFrames, caption: "Yarn spinning frames in operation", category: "Production" },
   { src: images.warehouseShelvingCart, caption: "Finished goods warehouse racking", category: "Warehouse" },
   { src: images.warehouseSteel, caption: "Warehouse structure and storage bays", category: "Warehouse" },
   { src: images.warehouseInterior, caption: "Interior view of the warehouse", category: "Warehouse" },
@@ -32,7 +32,7 @@ const galleryItems = [
   { src: images.warehouseConcrete, caption: "Loading floor of the warehouse", category: "Warehouse" },
 ];
 
-const categories = ["All", "Weaving", "Yarn", "Fabric", "Workforce", "Warehouse"];
+const categories = ["All", "Weaving", "Yarn", "Tape", "Production", "Warehouse"];
 
 export default function Gallery() {
   const [active, setActive] = useState("All");
@@ -46,7 +46,7 @@ export default function Gallery() {
       <PageHeaderBanner
         title="Gallery"
         breadcrumbItems={[{ label: "Gallery" }]}
-        image={images.industrialWorkers}
+        image={images.narrowFabricMachinery}
       />
 
       <section className="bg-white py-16">

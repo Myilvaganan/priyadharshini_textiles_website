@@ -10,7 +10,7 @@ export default function MissionVision() {
       <PageHeaderBanner
         title="Mission & Vision"
         breadcrumbItems={[{ label: "About Us", to: "/about" }, { label: "Mission & Vision" }]}
-        image={images.weaverLoomHands}
+        image={images.narrowLoomMachine}
       />
 
       <section className="bg-white py-20">
@@ -21,9 +21,10 @@ export default function MissionVision() {
               Manufacturing Excellence, Delivered Consistently
             </h2>
             <p className="mt-4 leading-relaxed text-brand-gray">
-              To deliver consistent, high-quality textile products to global brands through
-              integrated manufacturing, ethical practices and continuous investment in people
-              and technology — building partnerships that last beyond a single order.
+              To deliver consistent, high-quality tapes, lanyards and laces to global brands
+              through integrated manufacturing, ethical practices and continuous investment
+              in people and technology — building partnerships that last beyond a single
+              order.
             </p>
           </Reveal>
           <Reveal delay={150} className="rounded-xl bg-brand-green p-10 text-white shadow-sm">
@@ -31,10 +32,10 @@ export default function MissionVision() {
               Our Vision
             </p>
             <h2 className="mt-3 font-serif text-2xl font-bold">
-              A Globally Trusted Textile Partner
+              A Globally Trusted Tape Manufacturing Partner
             </h2>
             <p className="mt-4 leading-relaxed text-white/80">
-              To be recognized as one of the most trusted and sustainable textile
+              To be recognized as one of the most trusted and sustainable tape
               manufacturers in the world, known for quality, transparency and long-term value
               for every partner we serve.
             </p>

@@ -41,11 +41,11 @@ export default function EnquiryForm() {
       <div>
         <label className="text-sm font-medium text-brand-dark">Product of Interest</label>
         <select className={inputClasses}>
-          <option>Yarn</option>
-          <option>Greige Fabric</option>
-          <option>Dyed & Printed Fabric</option>
-          <option>Home Textiles</option>
-          <option>Technical Textiles</option>
+          <option>Yarn & Raw Cords</option>
+          <option>ID Card Tapes & Lanyards</option>
+          <option>Shoelaces</option>
+          <option>Hoodie Drawcords</option>
+          <option>Shorts Waistband Tapes</option>
         </select>
       </div>
       <div>

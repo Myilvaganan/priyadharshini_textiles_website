@@ -7,10 +7,10 @@ export const defaultContent = {
     hero: {
       slides: [
         {
-          eyebrow: "Trusted Textile Manufacturing Since 1998",
-          heading: "Weaving Trust Into Every Thread",
+          eyebrow: "Trusted Tape Manufacturing Since 1998",
+          heading: "Weaving Trust Into Every Tape",
           quote:
-            "Priyadharshini Textiles is a fully integrated B2B manufacturer of yarn, woven fabric and made-up textiles — engineered for quality, delivered at scale, trusted by global apparel and home furnishing brands.",
+            "Priyadharshini Tapes is a fully integrated B2B manufacturer of yarn, woven tape and made-up lanyards, laces and drawcords — engineered for quality, delivered at scale, trusted by global apparel and accessory brands.",
         },
         {
           eyebrow: "Precision At Every Stage",
@@ -20,9 +20,9 @@ export const defaultContent = {
         },
         {
           eyebrow: "Craftsmanship Meets Scale",
-          heading: "From Fibre to Fabric, Perfected",
+          heading: "From Fibre to Tape, Perfected",
           quote:
-            "Two decades of vertically integrated manufacturing, built to turn raw fibre into the fabric that leading apparel and home textile brands rely on.",
+            "Two decades of vertically integrated manufacturing, built to turn raw fibre into the tapes, laces and cords that leading apparel and accessory brands rely on.",
         },
         {
           eyebrow: "Global Reach, Local Craft",
@@ -40,18 +40,18 @@ export const defaultContent = {
     ],
     aboutTeaser: {
       heading: "A Legacy of Craftsmanship, Built for Modern Manufacturing",
-      body: "From a single weaving unit to a vertically integrated textile group spanning spinning, weaving, processing and made-ups, Priyadharshini Textiles has spent over two decades earning the trust of global brands through consistency, transparency and craftsmanship at scale.",
+      body: "From a single narrow-fabric weaving unit to a vertically integrated tape manufacturing group spanning yarn, weaving, braiding, dyeing and made-ups, Priyadharshini Tapes has spent over two decades earning the trust of global brands through consistency, transparency and craftsmanship at scale.",
     },
     productsIntro: {
       heading: "Our Product Range",
-      body: "From raw yarn to finished made-up textiles, our integrated production lines cover the full manufacturing chain.",
+      body: "From raw yarn to finished lanyards, laces and drawcords, our integrated production lines cover the full tape manufacturing chain.",
     },
     whyChooseUs: {
       heading: "Built on Reliability",
       features: [
         {
           title: "Integrated Manufacturing",
-          description: "Spinning, weaving, processing and made-ups under one roof for tighter quality control.",
+          description: "Yarn, weaving, braiding, dyeing and made-ups under one roof for tighter quality control.",
         },
         {
           title: "Certified Quality",
@@ -63,7 +63,7 @@ export const defaultContent = {
         },
         {
           title: "Modern Machinery",
-          description: "Shuttleless looms and automated spinning frames for consistent, high-volume output.",
+          description: "Needle looms and automated braiding machines for consistent, high-volume output.",
         },
         {
           title: "Sustainable Practices",
@@ -71,17 +71,17 @@ export const defaultContent = {
         },
         {
           title: "25+ Years Experience",
-          description: "A trusted manufacturing partner to global apparel and home textile brands since 1998.",
+          description: "A trusted manufacturing partner to global apparel and accessory brands since 1998.",
         },
       ],
     },
     facilityIntro: {
       heading: "Inside Our Facilities",
-      body: "A closer look at the spinning, weaving and finishing floors that keep our production running around the clock.",
+      body: "A closer look at the weaving, braiding and finishing floors that keep our production running around the clock.",
     },
     infrastructureTeaser: {
       heading: "State-of-the-Art Manufacturing Infrastructure",
-      body: "Spread across a modern industrial campus with dedicated spinning, weaving, processing and warehousing units, purpose-built for scale and precision.",
+      body: "Spread across a modern industrial campus with dedicated yarn, weaving, braiding, dyeing and made-ups units, purpose-built for scale and precision.",
     },
     cta: {
       heading: "Ready to Partner With Us?",
@@ -91,10 +91,10 @@ export const defaultContent = {
 
   about: {
     overview: {
-      heading: "A Fully Integrated Textile Manufacturer",
-      body: "Priyadharshini Textiles has grown from a single weaving unit into a vertically integrated group spanning spinning, weaving, processing and made-up textiles. For over 25 years, we've supplied consistent, certified quality fabric and yarn to apparel and home furnishing brands across the globe.",
+      heading: "A Fully Integrated Tape Manufacturer",
+      body: "Priyadharshini Tapes has grown from a single narrow-fabric weaving unit into a vertically integrated group spanning yarn, weaving, braiding, dyeing and made-up tapes. For over 25 years, we've supplied consistent, certified quality lanyards, laces and drawcords to apparel and accessory brands across the globe.",
       sections: [
-        { title: "Our Story", description: "How a single weaving unit grew into an integrated textile group." },
+        { title: "Our Story", description: "How a single weaving unit grew into an integrated tape manufacturing group." },
         { title: "Mission & Vision", description: "The purpose and values that guide every decision we make." },
         { title: "Leadership", description: "Meet the team leading our manufacturing and export operations." },
       ],
@@ -108,7 +108,7 @@ export const defaultContent = {
     },
     address: "SIPCOT Industrial Complex, Perundurai, Erode, Tamil Nadu 638052, India",
     phones: ["+91 424 267 1234", "+91 98765 43210"],
-    emails: ["info@priyadharshinitextiles.com", "exports@priyadharshinitextiles.com"],
+    emails: ["info@priyadharshinitapes.com", "exports@priyadharshinitapes.com"],
     hours: {
       weekdays: "Monday – Saturday: 9:00 AM – 6:30 PM IST",
       sunday: "Sunday: Closed",
@@ -118,38 +118,38 @@ export const defaultContent = {
   products: [
     {
       slug: "yarn",
-      name: "Yarn",
-      tagline: "Ring-spun, open-end and blended yarns for every count",
+      name: "Yarn & Raw Cords",
+      tagline: "Twisted, textured and dyed yarns engineered for tape strength",
       description:
-        "Our spinning division produces cotton, polyester and blended yarns across a wide range of counts, engineered for consistent strength, evenness and dyeability. Every lot is tested for count, tenacity and twist before release.",
+        "Our yarn division produces polyester, nylon and cotton yarns across a wide range of deniers, twisted and textured for the strength and consistency narrow-fabric weaving and braiding demand. Every lot is tested for tenacity, elongation and twist before release.",
     },
     {
-      slug: "greige-fabric",
-      name: "Greige Fabric",
-      tagline: "Unfinished woven fabric, loom-ready for downstream processing",
+      slug: "id-card-tapes",
+      name: "ID Card Tapes & Lanyards",
+      tagline: "Woven and printed lanyards with clips, hooks and safety breakaways",
       description:
-        "High-volume weaving sheds run modern shuttleless looms to produce greige (unprocessed) fabric in a variety of weaves and widths, supplied to dyeing, printing and finishing partners worldwide.",
+        "Our made-ups division converts woven tape into finished ID card lanyards and neck straps, fitted with swivel hooks, bulldog clips and safety breakaways, with woven-logo or printed branding to buyer specification.",
     },
     {
-      slug: "dyed-printed-fabric",
-      name: "Dyed & Printed Fabric",
-      tagline: "Reactive, vat and pigment dyeing with digital and rotary printing",
+      slug: "shoelaces",
+      name: "Shoelaces",
+      tagline: "Flat, round and waxed laces with precision tipping",
       description:
-        "In-house dyeing and printing lines deliver consistent shade matching and colorfastness at scale, with reactive, vat and pigment processes plus rotary and digital printing for custom designs.",
+        "Dedicated braiding and finishing lines produce flat, round and oval laces in cotton, polyester and nylon, with plastic or metal aglet tipping and tight length control for footwear brands.",
     },
     {
-      slug: "home-textiles",
-      name: "Home Textiles",
-      tagline: "Bedding, upholstery and made-up furnishing fabrics",
+      slug: "hoodie-tapes",
+      name: "Hoodie Drawcords",
+      tagline: "Flat and tubular drawcords engineered for apparel drawstrings",
       description:
-        "A dedicated made-ups division converts finished fabric into bedsheets, curtains, cushion covers and upholstery textiles, produced to buyer specification with full cut-and-sew capability.",
+        "High-speed narrow looms and braiders produce flat woven and tubular drawcords for hoodies and activewear, finished with reinforced, heat-sealed or metal tips for reliable pull-through.",
     },
     {
-      slug: "technical-textiles",
-      name: "Technical Textiles",
-      tagline: "Engineered fabrics for industrial and performance applications",
+      slug: "shorts-lays",
+      name: "Shorts Waistband Tapes",
+      tagline: "Woven and elastic waistband tapes and lays for shorts and activewear",
       description:
-        "Beyond apparel, our technical textiles line supplies coated, laminated and non-woven fabrics engineered for filtration, geotextile, automotive and packaging applications.",
+        "Purpose-built weaving lines produce non-elastic and elastic waistband tapes (\"lays\") engineered for stretch recovery, softness against skin and consistent width for shorts and activewear waistbands.",
     },
   ],
 };

@@ -1,4 +1,4 @@
-// Free-to-use Pexels photography (industrial / textile subjects), hotlinked via Pexels CDN.
+// Free-to-use Pexels photography (industrial / narrow-fabric subjects, no people), hotlinked via Pexels CDN.
 const px = (id, w = 1600) =>
   `https://images.pexels.com/photos/${id}/pexels-photo-${id}.jpeg?auto=compress&cs=tinysrgb&w=${w}`;
 
@@ -9,20 +9,21 @@ export const images = {
   threadsClose: px(15391103),
   threadSpoolsSelective: px(1212179),
   fabricRollsFactory: px(236748),
-  weaverLoomHands: px(6634704),
-  weaverLoomCloseup: px(6634341),
+  narrowLoomMachine: px(36327497),
+  loomMachineDetail: px(36327502),
+  yarnSpinningLine: px(8246482),
   weavingLoomColorful: px(4219107),
-  handLoomTopView: px(4219651),
-  sewingWorkerMachine: px(31112215),
-  factoryWorkerFacility: px(31091544),
-  womenSewingFactory: px(4492074),
-  womenSewingFactory2: px(4492077),
-  smilingTextileWorker: px(31321016),
-  dedicatedWorkers: px(31047132),
-  industrialWorkers: px(31031051),
-  busySewingFloor: px(31031031),
-  femaleWorkersModern: px(31047133),
-  femaleWorkersRolling: px(31047139),
+  sewingMachineDetail: px(3763234),
+  yarnRackFacility: px(6717035),
+  sewingMachineNeedle: px(4614221),
+  sewingMachineThreaded: px(31591460),
+  idCardLanyardBlank: px(7319158),
+  yarnSpinningMachine: px(8246480),
+  narrowFabricMachinery: px(18484117),
+  yarnSpinningFrames: px(8246743),
+  shoelaceCloseup: px(9781859),
+  drawstringPouch: px(3850539),
+  measuringTape: px(3143082),
   warehouseShelvingCart: px(30625283),
   warehouseSteel: px(12771407),
   warehouseInterior: px(10697106),
@@ -33,8 +34,8 @@ export const images = {
   // Higher-resolution versions for large display contexts (e.g. carousels)
   weavingLoomColorfulHD: px(4219107, 1920),
   fabricRollsFactoryHD: px(236748, 1920),
-  sewingWorkerMachineHD: px(31112215, 1920),
+  sewingMachineDetailHD: px(3763234, 1920),
   warehouseSteelHD: px(12771407, 1920),
-  industrialWorkersHD: px(31031051, 1920),
-  handLoomTopViewHD: px(4219651, 1920),
+  narrowFabricMachineryHD: px(18484117, 1920),
+  yarnSpinningLineHD: px(8246482, 1920),
 };

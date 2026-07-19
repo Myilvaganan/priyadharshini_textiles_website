@@ -66,8 +66,8 @@ export default function Home() {
           </Reveal>
           <Reveal delay={150} className="grid grid-cols-2 gap-4">
             <img
-              src={images.weaverLoomHands}
-              alt="Weaver working on a loom"
+              src={images.narrowLoomMachine}
+              alt="Narrow fabric weaving machine in production"
               className="h-64 w-full rounded-xl object-cover shadow-md"
             />
             <img

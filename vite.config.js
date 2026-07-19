@@ -12,9 +12,9 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.svg', 'apple-touch-icon.png'],
       manifest: {
-        name: 'Priyadharshini Textiles',
+        name: 'Priyadharshini Tapes',
         short_name: 'Priyadharshini',
-        description: 'Priyadharshini Textiles — B2B textile manufacturing, weaving and fabric production.',
+        description: 'Priyadharshini Tapes — B2B tape manufacturing: woven lanyards, laces and drawcords.',
         start_url: '/',
         display: 'standalone',
         background_color: '#f7f7f5',
