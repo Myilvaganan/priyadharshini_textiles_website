@@ -16,7 +16,7 @@ export default function HeroCarousel({ slides, intervalMs = 6000 }) {
             i === index ? "opacity-100" : "opacity-0"
           }`}
           style={{
-            backgroundImage: `linear-gradient(110deg, rgba(27,58,46,0.94) 30%, rgba(27,58,46,0.15)), url(${slide.image})`,
+            backgroundImage: `linear-gradient(110deg, rgba(27,58,46,0.94) 25%, rgba(27,58,46,0)), url(${slide.image})`,
           }}
         />
       ))}
